@@ -1,0 +1,40 @@
+{
+  "name": "my-aleo-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@puzzlehq/sdk": "^1.0.4",
+    "@puzzlehq/sdk-react": "^0.2.23",
+    "@puzzlehq/types": "^1.0.34",
+    "firebase": "^12.4.0",
+    "framer-motion": "^12.23.12",
+    "i18next": "^25.5.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-i18next": "^15.7.3",
+    "react-icons": "^5.5.0",
+    "react-syntax-highlighter": "^15.6.6",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.3.2",
+    "vite": "^7.1.2"
+  }
+}

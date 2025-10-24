@@ -1,0 +1,62 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f" />
+      <stop offset="100%" style="stop-color:#1a1a2e" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00fff7" />
+      <stop offset="100%" style="stop-color:#c084fc" />
+    </linearGradient>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00fff7" />
+      <stop offset="50%" style="stop-color:#ffffff" />
+      <stop offset="100%" style="stop-color:#c084fc" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background gradient -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Grid pattern -->
+  <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#00fff7" stroke-width="1" opacity="0.1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Glowing circles -->
+  <circle cx="200" cy="150" r="150" fill="#00fff7" opacity="0.15" filter="blur(60px)"/>
+  <circle cx="1000" cy="480" r="200" fill="#c084fc" opacity="0.15" filter="blur(60px)"/>
+  
+  <!-- ZK Logo (top left) -->
+  <g transform="translate(40, 40)">
+    <text x="0" y="50" font-family="monospace" font-size="48" font-weight="bold" fill="url(#logoGrad)">ZK</text>
+  </g>
+  
+  <!-- Main content -->
+  <g transform="translate(600, 200)">
+    <!-- Title -->
+    <text x="0" y="0" text-anchor="middle" font-family="monospace" font-size="96" font-weight="bold" fill="url(#textGrad)" letter-spacing="4">
+      ZKODYSSEY
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="60" text-anchor="middle" font-family="monospace" font-size="32" fill="#00fff7" opacity="0.9">
+      ⚡ Prove what you learn. Unlock the hidden web. ⚡
+    </text>
+    
+    <!-- Description -->
+    <text x="0" y="120" text-anchor="middle" font-family="monospace" font-size="24" fill="#888">
+      Master Zero Knowledge Proofs • Learn Leo Language • Build Private dApps
+    </text>
+    
+    <!-- Badge -->
+    <rect x="-150" y="150" width="300" height="50" rx="25" fill="none" stroke="#00fff7" stroke-width="2"/>
+    <text x="0" y="185" text-anchor="middle" font-family="monospace" font-size="18" fill="#00fff7">
+      Powered by Aleo Network
+    </text>
+  </g>
+</svg>
+
+
