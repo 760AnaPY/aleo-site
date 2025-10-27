@@ -232,10 +232,10 @@ const AleoShowcaseInner = () => {
     window.aleoDevCompleteAll = devCompleteAll;
     
     // Логируем доступные команды при первом запуске
-    console.log('🎮 Aleo Odyssey - Доступные команды консоли:');
-    console.log('  • window.viewAleoProgress() - просмотр прогресса');
-    console.log('  • window.resetAleoProgress() - сброс прогресса');
-    console.log('  • window.aleoDevCompleteAll("password") - 🔐 DEV: завершить все миссии');
+    console.log('🎮 Aleo Odyssey - console command:');
+    console.log('  • window.viewAleoProgress() - ');
+    console.log('  • window.resetAleoProgress() - ');
+    console.log('  • window.aleoDevCompleteAll("password") -  ');
     
     return () => {
       delete window.resetAleoProgress;
