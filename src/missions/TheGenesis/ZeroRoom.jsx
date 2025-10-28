@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { useTranslations } from '../../locales/translations';
+import translations from '../../locales/translations';
 import * as THREE from 'three';
 
 const ZeroRoom = ({ onBack, completedMissions, skipAnimation = false }) => {
   const { language } = useLanguage();
-  const t = useTranslations(language);
+  const t = translations[language];
   const [stage, setStage] = useState(skipAnimation ? 2 : 0); // Если skipAnimation - сразу финальная стадия
   const [badgeGenerated, setBadgeGenerated] = useState(skipAnimation); // Если skipAnimation - бейдж уже сгенерирован
   const [glitchActive, setGlitchActive] = useState(false);

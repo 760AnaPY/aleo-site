@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { useTranslations } from '../../locales/translations';
+import translations from '../../locales/translations';
 import * as THREE from 'three';
 
 const TheLanguage = ({ onBack, onComplete }) => {
   const { language } = useLanguage();
-  const t = useTranslations(language);
+  const t = translations[language];
   const [missionProgress, setMissionProgress] = useState(0);
   const [codeInput, setCodeInput] = useState('');
   const [codeResult, setCodeResult] = useState('');

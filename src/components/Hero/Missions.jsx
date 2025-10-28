@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { useTranslations } from '../../locales/translations';
+import translations from '../../locales/translations';
 
 const Missions = ({ missions, onStartMission, completedMissions, onShowZeroRoom }) => {
   const { language } = useLanguage();
-  const t = useTranslations(language);
+  const t = translations[language];
   const [currentMission, setCurrentMission] = useState(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const canvasRef = useRef(null);

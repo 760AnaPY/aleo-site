@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useTranslations } from '../locales/translations';
+import { getTranslations } from '../locales/translations';
 
 export const useWallet = () => {
   const { language } = useLanguage();
-  const t = useTranslations(language);
+  const t = getTranslations(language);
   const [isConnected, setIsConnected] = useState(false);
   const [walletType, setWalletType] = useState(null);
   const [address, setAddress] = useState('');

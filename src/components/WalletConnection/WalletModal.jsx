@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useWalletContext } from '../../contexts/WalletContext';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { useTranslations } from '../../locales/translations';
+import translations from '../../locales/translations';
 
 const WalletModal = ({ isOpen, onClose }) => {
   const { language } = useLanguage();
-  const t = useTranslations(language);
+  const t = translations[language];
   const { connect, isWalletAvailable, getWalletStatus, refreshWalletAvailability, isLoading } = useWalletContext();
   const [error, setError] = useState('');
   const [connecting, setConnecting] = useState('');

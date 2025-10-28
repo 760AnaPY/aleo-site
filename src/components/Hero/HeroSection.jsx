@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { useTranslations } from '../../locales/translations';
+import { getTranslations } from '../../locales/translations';
 import { WalletModal } from '../WalletConnection';
 
 const HeroSection = ({ onConnected }) => {
   const { language } = useLanguage();
-  const t = useTranslations(language);
+  const t = getTranslations(language);
   const [command, setCommand] = useState('');
   const [isConnecting, setIsConnecting] = useState(false);
   const [isConnected, setIsConnected] = useState(false);

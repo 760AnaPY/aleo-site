@@ -2361,3 +2361,10 @@ export const useTranslations = (language) => {
   return translations[language] || translations.en;
 };
 
+
+// 👉 Эта функция должна существовать, если ты её импортируешь
+export function getTranslations(lang = 'en') {
+  return translations[lang] || translations.en;
+}
+
+export default translations;

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { useTranslations } from '../../locales/translations';
+import { translations } from '../../locales/translations';
 
 const WalletConnection = ({ onConnected, onDisconnected }) => {
   const { language } = useLanguage();
-  const t = useTranslations(language);
+  const t = translations[language];
   const [isConnected, setIsConnected] = useState(false);
   const [walletType, setWalletType] = useState(null);
   const [address, setAddress] = useState('');
@@ -42,83 +42,15 @@ const WalletConnection = ({ onConnected, onDisconnected }) => {
   }, [onConnected]);
 
   const connectLeoWallet = async () => {
-    if (!window.leo) {
-      setError(t.wallet.errors.leoNotFound);
-      return;
-    }
-
-    setIsConnecting(true);
-    setError('');
-
-    try {
-      // Request connection
-      const response = await window.leo.request({
-        method: 'connect'
-      });
-
-      if (response && response.address) {
-        const connection = {
-          type: 'leo',
-          address: response.address,
-          publicKey: response.publicKey
-        };
-
-        setIsConnected(true);
-        setWalletType('leo');
-        setAddress(response.address);
-        
-        // Save to localStorage
-        localStorage.setItem('aleoWalletConnection', JSON.stringify(connection));
-        
-        if (onConnected) onConnected(connection);
-      } else {
-        throw new Error(t.wallet.errors.connectionFailed);
-      }
-    } catch (err) {
-      setError(`Leo Wallet connection error: ${err.message}`);
-    } finally {
-      setIsConnecting(false);
-    }
+    // Show stub error instead of actual connection
+    alert('Кошелек временно недоступен. Функция подключения будет добавлена в следующем обновлении.');
+    return;
   };
 
   const connectPuzzleWallet = async () => {
-    if (!window.puzzle) {
-      setError(t.wallet.errors.puzzleNotFound);
-      return;
-    }
-
-    setIsConnecting(true);
-    setError('');
-
-    try {
-      // Request connection
-      const response = await window.puzzle.request({
-        method: 'connect'
-      });
-
-      if (response && response.address) {
-        const connection = {
-          type: 'puzzle',
-          address: response.address,
-          publicKey: response.publicKey
-        };
-
-        setIsConnected(true);
-        setWalletType('puzzle');
-        setAddress(response.address);
-        
-        // Save to localStorage
-        localStorage.setItem('aleoWalletConnection', JSON.stringify(connection));
-        
-        if (onConnected) onConnected(connection);
-      } else {
-        throw new Error(t.wallet.errors.connectionFailed);
-      }
-    } catch (err) {
-      setError(`Puzzle Wallet connection error: ${err.message}`);
-    } finally {
-      setIsConnecting(false);
-    }
+    // Show stub error instead of actual connection
+    alert('Кошелек временно недоступен. Функция подключения будет добавлена в следующем обновлении.');
+    return;
   };
 
   const disconnect = () => {

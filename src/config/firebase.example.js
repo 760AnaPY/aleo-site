@@ -13,7 +13,7 @@ import { getAuth, signInAnonymously } from 'firebase/auth';
 // ========================================
 const firebaseConfig = {
   // Твой API ключ из Firebase Console
-  apiKey: "AIzaSyC_ЗАМЕНИ_НА_СВОЙ_API_KEY",
+  apiKey: "AIzaSyC_ЗАМЕНИ_НА_СВОЙ",
   
   // Домен авторизации (обычно: твой-проект.firebaseapp.com)
   authDomain: "твой-проект.firebaseapp.com",

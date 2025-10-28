@@ -14,8 +14,6 @@
   },
   "dependencies": {
     "@puzzlehq/sdk": "^1.0.4",
-    "@puzzlehq/sdk-react": "^0.2.23",
-    "@puzzlehq/types": "^1.0.34",
     "firebase": "^12.4.0",
     "framer-motion": "^12.23.12",
     "i18next": "^25.5.2",

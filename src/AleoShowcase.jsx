@@ -11,14 +11,14 @@ import ZeroRoom from "./missions/TheGenesis/ZeroRoom";
 import CircuitBuilder from "./missions/TheGenesis/CircuitBuilder";
 // import TheLedger from "./missions/TheGenesis/TheLedger";
 import { useLanguage } from "./contexts/LanguageContext";
-import { useTranslations } from "./locales/translations";
+import { translations } from "./locales/translations";
 import { WalletProvider } from "./contexts/WalletContext";
 import { WalletModal } from "./components/WalletConnection";
 import { Header } from "./components/Header";
 
 const AleoShowcaseInner = () => {
   const { language } = useLanguage();
-  const t = useTranslations(language);
+  const t = translations[language];
 
   // Загрузка сохраненного прогресса из localStorage
   const [completedMissions, setCompletedMissions] = useState(() => {
