@@ -9,12 +9,10 @@ const Missions = ({ missions, onStartMission, completedMissions, onShowZeroRoom 
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const canvasRef = useRef(null);
 
-  // Рассчитываем прогресс только по основным миссиям (без бонусной и продвинутых)
+  /* Рассчитываем прогресс только по основным миссиям (без бонусной и продвинутых) */
   const mainMissions = missions.filter(m => !m.isBonus && !m.isAdvanced);
   const mainMissionIds = mainMissions.map(m => m.id);
   const completedMainMissions = completedMissions.filter(id => mainMissionIds.includes(id));
-  const progressPercentage = Math.round((completedMainMissions.length / mainMissions.length) * 100);
-  const progressWidth = `${progressPercentage}%`;
 
   // Отслеживание мыши
   useEffect(() => {
@@ -154,7 +152,7 @@ const Missions = ({ missions, onStartMission, completedMissions, onShowZeroRoom 
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white font-mono overflow-hidden relative">
+    <div id="missions" className="min-h-screen bg-[#0a0a0f] text-white font-mono overflow-hidden relative scroll-mt-24">
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -178,25 +176,11 @@ const Missions = ({ missions, onStartMission, completedMissions, onShowZeroRoom 
           filter: 'blur(60px)'
         }}
       />
-      {/* Status Panel */}
-      <div className="absolute top-6 right-6 bg-black/40 backdrop-blur-md border border-[#00fff7]/30 rounded-lg p-4 shadow-lg shadow-[#00fff7]/10">
-        <div className="text-sm space-y-1">
-          <div className="text-[#00fff7]">{t.missions.statusPanel.prover}</div>
-          <div className="text-gray-400">{t.missions.statusPanel.level}: <span className="text-white">1</span></div>
-          <div className="text-gray-400">{t.missions.statusPanel.knowledge}: <span className="text-[#c084fc]">{progressPercentage}%</span></div>
-          <div className="text-gray-400">{t.missions.statusPanel.proofs}: <span className="text-white">{completedMainMissions.length}/{mainMissions.length}</span></div>
-        </div>
-        <div className="mt-3 h-2 bg-gray-800 rounded-full overflow-hidden">
-          <div 
-            className="h-full bg-gradient-to-r from-[#00fff7] to-[#c084fc] transition-all duration-500 animate-pulse" 
-            style={{ width: progressWidth }}
-          />
-        </div>
-      </div>
 
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-6 py-12">
-        <div className="text-center mb-12 animate-fade-in">
+
+        <div className="text-center mb-12 animate-fade-in mt-8 md:mt-12">
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-[#00fff7] to-[#c084fc] bg-clip-text text-transparent">
             {t.missions.title}
           </h1>

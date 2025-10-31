@@ -35,7 +35,7 @@ const WalletStatus = () => {
     return (
       <div className="flex items-center gap-1.5 text-gray-400">
         <div className="w-1.5 h-1.5 bg-gray-500 rounded-full"></div>
-        <span className="text-xs">Not Connected</span>
+        <span className="text-xs"></span>
       </div>
     );
   }

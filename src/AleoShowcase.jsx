@@ -1,6 +1,13 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import HeroSection from "./components/Hero/HeroSection";
 import Missions from "./components/Hero/Missions";
+import FirstSections from "./components/Hero/FirstSections";
+import AboutSections from "./components/Hero/AboutSections";
+import BlockchainExplorerComparison from "./components/Hero/BlockchainExplorerComparison";
+import ZKDiagramSection from "./components/Hero/ZKDiagramSection";
+import HowItWorksSection from "./components/Hero/HowItWorksSection";
+import PrivacyArchitectureSection from "./components/Hero/PrivacyArchitectureSection";
+import TransactionFlowComparison from "./components/Hero/TransactionFlowComparison";
 import TheGenesis from "./missions/TheGenesis/TheGenesis";
 import TheLanguage from "./missions/TheGenesis/TheLanguage";
 import TheCircuit from "./missions/TheGenesis/TheCircuit";
@@ -365,15 +372,28 @@ const AleoShowcaseInner = () => {
   if (showMissions) {
     return (
       <>
-        <Missions
-          missions={unlockedMissions}
-          completedMissions={completedMissions}
-          onStartMission={handleStartMission}
-          onShowZeroRoom={() => setShowZeroRoom(true)}
-        />
-        <WalletModal 
-          isOpen={showWalletModal} 
-          onClose={() => setShowWalletModal(false)} 
+        <div className="space-y-16 md:space-y-24">
+          <FirstSections />
+          <AboutSections />
+          <BlockchainExplorerComparison />
+          <div className="space-y-0">
+            <HowItWorksSection />
+            <ZKDiagramSection />
+          </div>
+          <div className="space-y-0">
+            <PrivacyArchitectureSection />
+            <TransactionFlowComparison />
+          </div>
+          <Missions
+            missions={unlockedMissions}
+            completedMissions={completedMissions}
+            onStartMission={handleStartMission}
+            onShowZeroRoom={() => setShowZeroRoom(true)}
+          />
+        </div>
+        <WalletModal
+          isOpen={showWalletModal}
+          onClose={() => setShowWalletModal(false)}
         />
       </>
     );
@@ -382,10 +402,23 @@ const AleoShowcaseInner = () => {
   // Иначе показываем терминал
   return (
     <>
-      <HeroSection onConnected={handleConnected} />
-      <WalletModal 
-        isOpen={showWalletModal} 
-        onClose={() => setShowWalletModal(false)} 
+      <div className="space-y-16 md:space-y-24">
+        <FirstSections />
+        <AboutSections />
+        <BlockchainExplorerComparison />
+        <div className="space-y-0">
+          <HowItWorksSection />
+          <ZKDiagramSection />
+        </div>
+        <div className="space-y-0">
+          <PrivacyArchitectureSection />
+          <TransactionFlowComparison />
+        </div>
+        <HeroSection onConnected={handleConnected} />
+      </div>
+      <WalletModal
+        isOpen={showWalletModal}
+        onClose={() => setShowWalletModal(false)}
       />
     </>
   );

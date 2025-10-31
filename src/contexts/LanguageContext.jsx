@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const LanguageContext = createContext();
@@ -11,27 +12,23 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState(() => {
-    // Загружаем сохраненный язык или используем английский по умолчанию
-    const saved = localStorage.getItem('aleoLanguage');
-    return saved || 'en';
-  });
+  // Force English by default and for the entire session/site
+  const [language, setLanguage] = useState('en');
 
-  // Сохраняем выбранный язык
   useEffect(() => {
-    localStorage.setItem('aleoLanguage', language);
-  }, [language]);
+    // Persist English to avoid any previously saved RU state
+    localStorage.setItem('aleoLanguage', 'en');
+  }, []);
 
-  const toggleLanguage = () => {
-    setLanguage(prev => prev === 'en' ? 'ru' : 'en');
-  };
+  // Enforce English regardless of external calls
+  const enforceEnglish = () => setLanguage('en');
 
   const value = {
     language,
-    setLanguage,
-    toggleLanguage,
-    isRussian: language === 'ru',
-    isEnglish: language === 'en'
+    setLanguage: enforceEnglish,
+    toggleLanguage: enforceEnglish,
+    isRussian: false,
+    isEnglish: true
   };
 
   return (

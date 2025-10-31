@@ -14,18 +14,6 @@ const Missions = ({ missions, completedMissions }) => {
         }} />
       </div>
 
-      {/* Status Panel */}
-      <div className="absolute top-6 right-6 bg-black/40 backdrop-blur-md border border-[#00fff7]/30 rounded-lg p-4 shadow-lg shadow-[#00fff7]/10">
-        <div className="text-sm space-y-1">
-          <div className="text-[#00fff7]">Prover #001</div>
-          <div className="text-gray-400">Level: <span className="text-white">1</span></div>
-          <div className="text-gray-400">Knowledge: <span className="text-[#c084fc]">20%</span></div>
-          <div className="text-gray-400">Proofs: <span className="text-white">{completedMissions.length}/{missions.length}</span></div>
-        </div>
-        <div className="mt-3 h-2 bg-gray-800 rounded-full overflow-hidden">
-          <div className="h-full bg-gradient-to-r from-[#00fff7] to-[#c084fc] w-1/5 animate-pulse" />
-        </div>
-      </div>
 
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-6 py-12">
