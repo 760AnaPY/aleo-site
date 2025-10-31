@@ -54,13 +54,13 @@ const TransactionFlowComparison = () => {
         <div className="flex justify-center gap-4 mb-8">
           <button
             onClick={() => switchChain('zkrollup')}
-            className={`px-8 py-3 border transition ${selectedChain==='zkrollup' ? 'border-white bg-white text-black' : 'border-gray-800 hover:border-gray-700'}`}
+            className={`px-8 py-3 border transition ${selectedChain==='zkrollup' ? 'border-white bg-white text-black' : 'border-gray-900 hover:border-gray-800'}`}
           >
             <div className="flex items-center gap-2"><FiEye size={16} /><span className="text-sm">zkRollup (L2 → L1)</span></div>
           </button>
           <button
             onClick={() => switchChain('aleo')}
-            className={`px-8 py-3 border transition ${selectedChain==='aleo' ? 'border-white bg-white text-black' : 'border-gray-800 hover:border-gray-700'}`}
+            className={`px-8 py-3 border transition ${selectedChain==='aleo' ? 'border-white bg-white text-black' : 'border-gray-900 hover:border-gray-800'}`}
           >
             <div className="flex items-center gap-2"><FiLock size={16} /><span className="text-sm">Aleo (Private)</span></div>
           </button>
@@ -68,7 +68,7 @@ const TransactionFlowComparison = () => {
 
         <div className="flex items-center justify-center gap-2 mb-8">
           {steps.map((_, idx) => (
-            <div key={idx} className={`h-px transition-all duration-500 ${idx<=step ? 'w-16 bg-white' : 'w-8 bg-gray-800'}`} />
+            <div key={idx} className={`h-px transition-all duration-500 ${idx<=step ? 'w-16 bg-white' : 'w-8 bg-gray-900'}`} />
           ))}
         </div>
 
@@ -76,27 +76,27 @@ const TransactionFlowComparison = () => {
           <div className="mb-8">
             <div className="grid grid-cols-7 gap-4 items-center">
               <div className={`transition-all duration-500 ${isActive('user') ? 'opacity-100 scale-105' : 'opacity-40 scale-100'}`}>
-                <div className="border border-gray-800 p-6 min-h-[140px] flex flex-col justify-center">
+                <div className="border border-gray-900 p-6 rounded min-h-[140px] flex flex-col justify-center">
                   <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">User</div>
                   <div className="text-xs text-gray-400 font-mono whitespace-pre-line">{currentStep.data.user || ''}</div>
                   {step>=0 && <div className="mt-3 flex items-center gap-1 text-xs text-gray-600"><FiUnlock size={10}/> Plain</div>}
                 </div>
               </div>
               <div className={`flex justify-center transition-opacity duration-500 ${step>=1 ? 'opacity-100' : 'opacity-20'}`}>
-                <FiChevronRight size={16} className="text-gray-700"/>
+                <FiChevronRight size={16} className="text-gray-800"/>
               </div>
               <div className={`transition-all duration-500 ${isActive('encryption') ? 'opacity-100 scale-105' : 'opacity-40 scale-100'}`}>
-                <div className="border border-gray-800 p-6 min-h-[140px] flex flex-col justify-center">
+                <div className="border border-gray-900 p-6 rounded min-h-[140px] flex flex-col justify-center">
                   <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">Encrypt</div>
                   <div className="text-xs text-gray-400 font-mono whitespace-pre-line">{step>=1 ? '████' : ''}</div>
                   {step>=1 && <div className="mt-3 flex items-center gap-1 text-xs text-gray-600"><FiLock size={10}/> Temp</div>}
                 </div>
               </div>
               <div className={`flex justify-center transition-opacity duration-500 ${step>=2 ? 'opacity-100' : 'opacity-20'}`}>
-                <FiChevronRight size={16} className="text-gray-700"/>
+                <FiChevronRight size={16} className="text-gray-800"/>
               </div>
               <div className={`transition-all duration-500 ${isActive('sequencer') ? 'opacity-100 scale-105' : 'opacity-40 scale-100'}`}>
-                <div className="border border-gray-800 p-6 min-h-[140px] flex flex-col justify-center">
+                <div className="border border-gray-900 p-6 rounded min-h-[140px] flex flex-col justify-center">
                   <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">L2 Sequencer</div>
                   <div className="text-xs text-gray-400 font-mono whitespace-pre-line">{currentStep.data.sequencer || ''}</div>
                 </div>
@@ -105,7 +105,7 @@ const TransactionFlowComparison = () => {
                 <FiChevronRight size={16} className="text-gray-700"/>
               </div>
               <div className={`transition-all duration-500 ${isActive('l1') ? 'opacity-100 scale-105' : 'opacity-40 scale-100'}`}>
-                <div className={`border p-6 min-h-[140px] flex flex-col justify-center ${currentStep.data.l1 ? 'border-red-900/50 bg-red-950/10' : 'border-gray-800'}`}>
+                <div className={`border p-6 min-h-[140px] flex flex-col justify-center ${currentStep.data.l1 ? 'border-red-900/50 bg-red-950/10' : 'border-gray-900'}`}>
                   <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">Ethereum L1</div>
                   <div className="text-xs text-gray-400 font-mono whitespace-pre-line">{currentStep.data.l1 || ''}</div>
                 </div>
@@ -116,27 +116,27 @@ const TransactionFlowComparison = () => {
           <div className="mb-8">
             <div className="grid grid-cols-5 gap-6 items-center max-w-4xl mx-auto">
               <div className={`transition-all duration-500 ${isActive('user') ? 'opacity-100 scale-105' : 'opacity-40 scale-100'}`}>
-                <div className="border border-gray-800 p-6 min-h-[160px] flex flex-col justify-center">
+                <div className="border border-gray-900 p-6 rounded min-h-[160px] flex flex-col justify-center">
                   <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">User</div>
                   <div className="text-xs text-gray-400 font-mono whitespace-pre-line">{currentStep.data.user || ''}</div>
                   {step>=0 && <div className="mt-3 flex items-center gap-1 text-xs text-gray-600"><FiLock size={10}/> Local</div>}
                 </div>
               </div>
               <div className={`flex justify-center transition-opacity duration-500 ${step>=1 ? 'opacity-100' : 'opacity-20'}`}>
-                <FiChevronRight size={16} className="text-gray-700"/>
+                <FiChevronRight size={16} className="text-gray-800"/>
               </div>
               <div className={`transition-all duration-500 ${isActive('execution') ? 'opacity-100 scale-105' : 'opacity-40 scale-100'}`}>
-                <div className="border border-gray-800 p-6 min-h-[160px] flex flex-col justify-center">
+                <div className="border border-gray-900 p-6 rounded min-h-[160px] flex flex-col justify-center">
                   <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">Execute</div>
                   <div className="text-xs text-gray-400 font-mono whitespace-pre-line">{currentStep.data.execution || ''}</div>
                   {step>=1 && <div className="mt-3 flex items-center gap-1 text-xs text-green-600"><FiLock size={10}/> Private</div>}
                 </div>
               </div>
               <div className={`flex justify-center transition-opacity duration-500 ${step>=3 ? 'opacity-100' : 'opacity-20'}`}>
-                <FiChevronRight size={16} className="text-gray-700"/>
+                <FiChevronRight size={16} className="text-gray-800"/>
               </div>
               <div className={`transition-all duration-500 ${isActive('network') ? 'opacity-100 scale-105' : 'opacity-40 scale-100'}`}>
-                <div className="border border-gray-800 p-6 min-h-[160px] flex flex-col justify-center">
+                <div className="border border-gray-900 p-6 rounded min-h-[160px] flex flex-col justify-center">
                   <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">Aleo Network</div>
                   <div className="text-xs text-gray-400 font-mono whitespace-pre-line">{currentStep.data.network || ''}</div>
                 </div>
@@ -145,7 +145,7 @@ const TransactionFlowComparison = () => {
             <div className="grid grid-cols-5 gap-6 mt-8 max-w-4xl mx-auto">
               <div className="col-start-2"></div>
               <div className={`transition-all duration-500 ${isActive('proof') ? 'opacity-100 scale-105' : 'opacity-40 scale-100'}`}>
-                <div className="border border-gray-800 p-6 min-h-[140px] flex flex-col justify-center">
+                <div className="border border-gray-900 p-6 rounded min-h-[140px] flex flex-col justify-center">
                   <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">ZK Proof π</div>
                   <div className="text-xs text-gray-400 font-mono whitespace-pre-line">{currentStep.data.proof || ''}</div>
                 </div>
@@ -160,17 +160,17 @@ const TransactionFlowComparison = () => {
         </div>
 
         <div className="flex justify-center items-center gap-4 mb-8">
-          <button onClick={reset} className="p-2 hover:bg-white/5 border border-gray-800 transition" title="Reset">
+          <button onClick={reset} className="p-2 hover:bg-white/5 border border-gray-900 transition" title="Reset">
             <FiRotateCcw size={18} />
           </button>
-          <button onClick={prev} disabled={step===0} className="p-2 hover:bg-white/5 border border-gray-800 transition disabled:opacity-30 disabled:cursor-not-allowed">
+          <button onClick={prev} disabled={step===0} className="p-2 hover:bg-white/5 border border-gray-900 transition disabled:opacity-30 disabled:cursor-not-allowed">
             <FiChevronRight size={18} className="rotate-180" />
           </button>
           <button onClick={playPause} className="px-6 py-2 border border-white hover:bg-white hover:text-black transition flex items-center gap-2">
             {isPlaying ? <FiPause size={16} /> : <FiPlay size={16} />}
             <span className="text-sm">{isPlaying ? 'Pause' : 'Play'}</span>
           </button>
-          <button onClick={next} disabled={step===steps.length-1} className="p-2 hover:bg-white/5 border border-gray-800 transition disabled:opacity-30 disabled:cursor-not-allowed">
+          <button onClick={next} disabled={step===steps.length-1} className="p-2 hover:bg-white/5 border border-gray-900 transition disabled:opacity-30 disabled:cursor-not-allowed">
             <FiChevronRight size={18} />
           </button>
         </div>
@@ -181,7 +181,7 @@ const TransactionFlowComparison = () => {
             <p className="text-xs text-gray-600">What happens to your transaction data</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border border-gray-900 p-6">
+            <div className="border border-gray-900 p-6 rounded">
               <div className="flex items-center gap-2 mb-4"><FiEye size={16} /><h5 className="text-sm font-light uppercase tracking-wider">zkRollup</h5></div>
               <div className="space-y-4 text-xs text-gray-400">
                 <div><div className="text-gray-500 mb-1">L2 Phase:</div>Transactions encrypted temporarily</div>
@@ -190,7 +190,7 @@ const TransactionFlowComparison = () => {
                 <div className="pt-4 border-t border-gray-900"><div className="text-gray-500 mb-1">Privacy:</div>Temporary, revealed at settlement</div>
               </div>
             </div>
-            <div className="border border-gray-900 p-6">
+            <div className="border border-gray-900 p-6 rounded">
               <div className="flex items-center gap-2 mb-4"><FiLock size={16} /><h5 className="text-sm font-light uppercase tracking-wider">Aleo</h5></div>
               <div className="space-y-4 text-xs text-gray-400">
                 <div><div className="text-gray-500 mb-1">Execution:</div>Private by design, local execution</div>

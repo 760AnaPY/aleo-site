@@ -14,8 +14,8 @@ const PrivacyArchitectureSection = () => {
           </p>
         </div>
 
-        {/* Info Block */}
-        <div className="max-w-3xl mx-auto mb-12 border border-gray-900 p-8 rounded">
+        {/* Info Block (aligned styling with adjacent sections) */}
+        <div className="max-w-4xl mx-auto mb-12 border border-gray-900 p-8 rounded-lg">
           <div className="space-y-6 text-sm text-gray-400">
             <p className="leading-relaxed">
               <span className="text-white font-light">
@@ -29,7 +29,7 @@ const PrivacyArchitectureSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 border-t border-gray-900">
               <div>
                 <div className="text-xs text-gray-600 uppercase tracking-wider mb-2 flex items-center gap-2">
-                  <span className="w-2 h-2 bg-red-600 rounded-full"></span>
+                  <span className="w-2 h-2 bg-red-500 rounded-full"></span>
                   zkRollup (L2 → L1)
                 </div>
                 <div className="text-xs text-gray-500 leading-relaxed">
@@ -41,7 +41,7 @@ const PrivacyArchitectureSection = () => {
 
               <div>
                 <div className="text-xs text-gray-600 uppercase tracking-wider mb-2 flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-600 rounded-full"></span>
+                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
                   Aleo (Private L1)
                 </div>
                 <div className="text-xs text-gray-500 leading-relaxed">
