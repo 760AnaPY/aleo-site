@@ -402,20 +402,7 @@ const AleoShowcaseInner = () => {
   // Иначе показываем терминал
   return (
     <>
-      <div className="space-y-16 md:space-y-24">
-        <FirstSections />
-        <AboutSections />
-        <BlockchainExplorerComparison />
-        <div className="space-y-0">
-          <HowItWorksSection />
-          <ZKDiagramSection />
-        </div>
-        <div className="space-y-0">
-          <PrivacyArchitectureSection />
-          <TransactionFlowComparison />
-        </div>
-        <HeroSection onConnected={handleConnected} />
-      </div>
+      <HeroSection onConnected={handleConnected} />
       <WalletModal
         isOpen={showWalletModal}
         onClose={() => setShowWalletModal(false)}
