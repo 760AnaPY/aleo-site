@@ -2,7 +2,7 @@ import React from "react";
 
 const PrivacyArchitectureSection = () => {
   return (
-    <section id="architecture" className="relative bg-[#0a0a0f] text-white px-8 pt-12 pb-2">
+    <section id="architecture" className="bg-[#0a0a0f] text-white px-8 pt-12 pb-2">
       <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-16">
           <div className="text-xs text-gray-500 uppercase tracking-wider mb-4">
@@ -56,10 +56,6 @@ const PrivacyArchitectureSection = () => {
 
         {/* Diagram removed per request */}
       </div>
-
-      {/* Smooth fade into next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-b from-transparent to-[#0a0a0f] pointer-events-none" />
-
     </section>
   );
 };
