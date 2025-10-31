@@ -199,6 +199,35 @@ const Missions = ({ missions, onStartMission, completedMissions, onShowZeroRoom 
           )}
         </div>
 
+        {/* Odyssey Overview */}
+        <div className="max-w-4xl mx-auto -mt-2 mb-10">
+          <div className="group bg-black/40 backdrop-blur-md border border-[#00fff7]/20 rounded-lg p-6 transition-all hover:border-[#00fff7]/40 hover:shadow-lg hover:shadow-[#00fff7]/10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider mb-2">About</div>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  THE ZK ODYSSEY is a concise, hands-on path into zero-knowledge and Aleo. Complete focused missions, understand the privacy model, and see how proofs enable private-by-default apps.
+                </p>
+              </div>
+              <div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider mb-2">You will learn</div>
+                <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside marker:text-[#00fff7]/70">
+                  <li>zk fundamentals and proof intuition</li>
+                  <li>Aleo’s end-to-end privacy model</li>
+                  <li>How to build private dApps</li>
+                </ul>
+              </div>
+              <div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider mb-2">Format</div>
+                <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside marker:text-[#c084fc]/70">
+                  <li>6 missions, linear progression</li>
+                  <li>Unlock ZeroRoom after main missions</li>
+                  <li>Short reads + interactive steps</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Missions Grid */}
         <div className="max-w-4xl mx-auto space-y-4">
           <h2 className="text-2xl text-[#00fff7] mb-6 flex items-center gap-3">

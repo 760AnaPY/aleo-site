@@ -9,7 +9,7 @@ const FirstSections = () => {
     <section id="hero-top" className="min-h-screen bg-[#0a0a0f] text-white relative overflow-hidden">
       {/* Glowing Orbs (subtle to match site) */}
       <div className="absolute top-24 left-16 w-64 h-64 bg-[#00fff7] rounded-full blur-[120px] opacity-20 animate-pulse" />
-      <div className="absolute bottom-20 right-24 w-96 h-96 bg-[#c084fc] rounded-full blur-[140px] opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute bottom-8 right-24 w-96 h-96 bg-[#c084fc] rounded-full blur-[140px] opacity-10 animate-pulse" style={{ animationDelay: '1s' }} />
 
       <div className="max-w-5xl mx-auto px-8 pt-24 pb-24 text-center relative z-10">
         {/* Badge */}
@@ -102,6 +102,9 @@ const FirstSections = () => {
           </div>
         </div>
       </div>
+
+      {/* Fade-out overlay to softly blend into next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent via-[#0a0a0f]/90 to-[#0a0a0f] pointer-events-none" />
 
       {/* Scroll Down to Missions */}
       <button
