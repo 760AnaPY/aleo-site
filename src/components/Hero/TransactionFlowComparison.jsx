@@ -44,9 +44,10 @@ const TransactionFlowComparison = () => {
   const playPause = () => { if (step >= steps.length - 1) setStep(0); setIsPlaying(p => !p); };
 
   return (
-    <section id="flow" className="bg-[#0a0a0f] text-white px-8 pt-2 pb-12">
+    <section id="flow" className="relative overflow-hidden bg-[#0a0a0f] text-white px-8 pt-0 pb-12">
+      <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-transparent to-[#0a0a0f] pointer-events-none"></div>
       <div className="max-w-6xl mx-auto">
-        <div className="bg-[#0a0a0f] p-8 rounded-lg border border-[#c084fc]/20 backdrop-blur-sm">
+        <div className="relative -mt-4 bg-[#0a0a0f] p-8 rounded-lg border border-[#c084fc]/20 backdrop-blur-sm">
           <div className="text-center mb-8">
           <h2 className="text-4xl font-light mb-2 tracking-wide">Transaction Privacy Flow</h2>
           <p className="text-gray-500 text-sm">Compare how data moves through different systems</p>
