@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-[#00fff7] to-[#c084fc] rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#00fff7] rounded-lg flex items-center justify-center">
               <span className="text-black font-bold text-lg">ZK</span>
             </div>
             <div>
@@ -29,7 +29,7 @@ const Header = () => {
               {!isConnected && (
                 <button
                   onClick={() => setShowWalletModal(true)}
-                  className="px-3 py-1.5 bg-gradient-to-r from-[#c084fc] to-[#00fff7] text-black font-bold rounded-md hover:opacity-90 transition-opacity flex items-center gap-1.5 text-xs"
+                  className="px-3 py-1.5 bg-[#00fff7] text-black font-bold rounded-md hover:bg-[#00fff7]/80 transition-colors flex items-center gap-1.5 text-xs"
                 >
                   Connect
                 </button>
