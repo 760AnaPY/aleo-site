@@ -401,13 +401,12 @@ const Missions = ({ missions, onStartMission, completedMissions, onShowZeroRoom 
               </div>
             </div>
 
-            {/* Brand logo (footer) */}
-            <div className="flex items-center">
-              <img
-                src="/logo-footer.png"
-                alt="Aleo Odyssey — ZK Journey"
-                className="h-8 w-auto opacity-90 hover:opacity-100 transition-opacity"
-              />
+            {/* Made with love */}
+            <div className="flex items-center gap-2 text-gray-400">
+              <span className="text-sm">Made with</span>
+              <span className="text-red-400 animate-pulse">❤️</span>
+              <span className="text-sm">by</span>
+              <span className="text-[#00fff7] font-bold">AnaPY</span>
             </div>
           </div>
 
