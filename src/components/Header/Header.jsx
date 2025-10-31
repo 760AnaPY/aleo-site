@@ -12,13 +12,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-[#00fff7] to-[#c084fc] rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-lg">ZK</span>
-            </div>
-            <div>
-              <h1 className="text-lg font-bold text-white">Aleo Odyssey</h1>
-              <p className="text-xs text-gray-400">ZK Journey</p>
-            </div>
+            <img
+              src="/logo-footer.png"
+              alt="Aleo Odyssey — ZK Journey"
+              className="h-10 w-auto opacity-95 hover:opacity-100 transition-opacity"
+            />
           </div>
 
           {/* Right side controls */}
