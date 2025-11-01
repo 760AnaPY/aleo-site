@@ -34,8 +34,15 @@ const HeroSection = ({ onConnected }) => {
     }
   }, [isConnecting, isConnected]);
 
-  const handleConnect = async () => {
-    const cmd = command.toLowerCase();
+  // Mobile detection removed; using CSS-only md:hidden for phone layouts
+  // Small-screen detector removed; CSS handles visibility
+  // Derived flag for highlighting the button when user typed "connect"
+  const isConnectTyped = command.trim().toLowerCase() === 'connect';
+
+  // Mobile connect button visibility is controlled via CSS (md:hidden). No runtime flag needed.
+
+  const handleConnect = async (cmdOverride) => {
+    const cmd = (cmdOverride ?? command).toLowerCase();
     
     // ПАСХАЛКА: Matrix эффект с падающими символами
     if (cmd === 'matrix' || cmd === 'матрица') {
@@ -451,7 +458,6 @@ const HeroSection = ({ onConnected }) => {
                     <span className="animate-pulse text-[#00fff7]">_</span>
                   </div>
 
-        
 
                   {terminalLines.map((line, idx) => (
                     <div
@@ -509,10 +515,25 @@ const HeroSection = ({ onConnected }) => {
               </div>
             )}
 
-            {/* Footer Hint */}
+            {/* Footer Hint + single mobile connect button */}
             {!isConnecting && !isConnected && (
               <div className="mt-8 text-center text-gray-600 text-sm animate-fade-in" style={{ animationDelay: '1s' }}>
                 <p>{t.hero.prompt} <span className="text-[#00fff7]">connect</span></p>
+                <div className="mt-4 md:hidden">
+                  <button
+                    onClick={() => handleConnect('connect')}
+                    disabled={isConnecting || isConnected}
+                    className={`px-5 py-2 rounded-md border transition-all duration-300 text-sm ${
+                      isConnectTyped
+                        ? 'bg-[#00fff7] text-black font-bold shadow-lg shadow-[#00fff7]/30 animate-pulse'
+                        : 'bg-black/40 text-[#00fff7] border-[#00fff7]/30 hover:border-[#00fff7] hover:bg-[#00fff7]/10'
+                    }`}
+                    aria-label="connect"
+                    title="connect"
+                  >
+                    connect
+                  </button>
+                </div>
               </div>
             )}
           </div>
@@ -525,6 +546,7 @@ const HeroSection = ({ onConnected }) => {
           </div>
         )}
       </div>
+
 
       {/* Global Styles */}
       <style>{`

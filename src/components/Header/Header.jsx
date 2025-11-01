@@ -31,7 +31,7 @@ const Header = () => {
                   onClick={() => setShowWalletModal(true)}
                   className="px-3 py-1.5 bg-[#00fff7] text-black font-bold rounded-md hover:bg-[#00fff7]/80 transition-colors flex items-center gap-1.5 text-xs"
                 >
-                  Connect
+                  Connect Wallet
                 </button>
               )}
             </div>
