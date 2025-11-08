@@ -352,7 +352,7 @@ const TheGenesis = ({ onBack, onComplete }) => {
 
                   <div className="bg-black/60 border border-[#00fff7]/20 rounded p-4">
                     <div className="text-xs text-[#00fff7] mb-3 flex items-center justify-between">
-                      <span>📝 БАЗОВЫЙ ПРИМЕР</span>
+                      <span>📝 BASIC EXAMPLE</span>
                       <span className="text-gray-500">hello.aleo</span>
                     </div>
                     
@@ -461,9 +461,9 @@ const TheGenesis = ({ onBack, onComplete }) => {
                     <div className="mt-6 bg-gradient-to-r from-[#00fff7]/20 to-[#c084fc]/20 border-2 border-[#00fff7] rounded-lg p-6 animate-fade-in">
                       <div className="text-center">
                         <div className="text-3xl mb-2">🎉</div>
-                        <div className="text-2xl font-bold text-[#00fff7] mb-2">Миссия завершена!</div>
-                        <div className="text-gray-300 mb-4">Вы получили: Proof of Knowledge #1</div>
-                        <div className="text-sm text-gray-400">Возвращение к списку миссий...</div>
+                        <div className="text-2xl font-bold text-[#00fff7] mb-2">Mission complete!</div>
+                        <div className="text-gray-300 mb-4">You have received: Proof of Knowledge #1</div>
+                        <div className="text-sm text-gray-400">Return to the mission list...</div>
                       </div>
                     </div>
                   )}

@@ -220,8 +220,7 @@ const Missions = ({ missions, onStartMission, completedMissions, onShowZeroRoom 
               <div>
                 <div className="text-xs text-gray-500 uppercase tracking-wider mb-2">Format</div>
                 <ul className="text-sm text-gray-400 space-y-2 list-disc list-inside marker:text-[#c084fc]/70">
-                  <li>6 missions, linear progression</li>
-                  <li>Unlock ZeroRoom after main missions</li>
+                  <li>5 missions, linear progression</li>
                   <li>Short reads + interactive steps</li>
                 </ul>
               </div>

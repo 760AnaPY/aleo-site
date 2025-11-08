@@ -231,7 +231,7 @@ const TheCircuit = ({ onBack, onComplete }) => {
                       <span>⚙️</span> Prover
                     </div>
                     <p className="text-sm text-gray-400">
-                      Генерирует доказательство на основе приватных данных
+                      Generates proof based on private data
                     </p>
                   </div>
                   <div className="bg-[#0a0a0f]/80 border border-[#00fff7]/20 rounded p-4">
@@ -239,7 +239,7 @@ const TheCircuit = ({ onBack, onComplete }) => {
                       <span>✓</span> Verifier
                     </div>
                     <p className="text-sm text-gray-400">
-                      Проверяет доказательство без доступа к приватным данным
+                      Verifies proof without accessing private data
                     </p>
                   </div>
                 </div>
@@ -339,13 +339,13 @@ const TheCircuit = ({ onBack, onComplete }) => {
                             </div>
                             <div className="flex-1">
                               <div><span className="text-[#ff79c6]">program</span> <span className="text-[#8be9fd]">token.aleo</span> <span className="text-gray-400">{`{`}</span></div>
-                              <div className="text-gray-400">    <span className="text-[#ffb86c]">// Приватная запись токена</span></div>
+                              <div className="text-gray-400">    <span className="text-[#ffb86c]">// Private token record</span></div>
                               <div>    <span className="text-[#ff79c6]">record</span> <span className="text-[#50fa7b]">Token</span> <span className="text-gray-400">{`{`}</span></div>
                               <div>        <span className="text-[#8be9fd]">owner</span>: <span className="text-[#50fa7b]">address</span>,</div>
                               <div>        <span className="text-[#8be9fd]">amount</span>: <span className="text-[#50fa7b]">u64</span>,</div>
                               <div>    <span className="text-gray-400">{`}`}</span></div>
                               <div className="text-gray-400">    </div>
-                              <div className="text-gray-400">    <span className="text-[#ffb86c]">// Создание токена (mint)</span></div>
+                              <div className="text-gray-400">    <span className="text-[#ffb86c]">// Token creation (mint)</span></div>
                               <div>    <span className="text-[#ff79c6]">transition</span> <span className="text-[#8be9fd]">mint</span><span className="text-gray-400">(</span></div>
                               <div>        <span className="text-[#8be9fd]">receiver</span>: <span className="text-[#50fa7b]">address</span>,</div>
                               <div>        <span className="text-[#8be9fd]">amount</span>: <span className="text-[#50fa7b]">u64</span></div>
@@ -356,7 +356,7 @@ const TheCircuit = ({ onBack, onComplete }) => {
                               <div>        <span className="text-gray-400">{`}`}</span>;</div>
                               <div>    <span className="text-gray-400">{`}`}</span></div>
                               <div className="text-gray-400">    </div>
-                              <div className="text-gray-400">    <span className="text-[#ffb86c]">// Передача токена</span></div>
+                              <div className="text-gray-400">    <span className="text-[#ffb86c]">// Token transfer</span></div>
                               <div>    <span className="text-[#ff79c6]">transition</span> <span className="text-[#8be9fd]">transfer</span><span className="text-gray-400">(</span></div>
                               <div>        <span className="text-[#8be9fd]">token</span>: <span className="text-[#50fa7b]">Token</span>,</div>
                               <div>        <span className="text-[#8be9fd]">to</span>: <span className="text-[#50fa7b]">address</span>,</div>
@@ -692,9 +692,9 @@ const TheCircuit = ({ onBack, onComplete }) => {
                     <div className="mt-6 bg-gradient-to-r from-[#ff6b6b]/20 to-[#c084fc]/20 border-2 border-[#ff6b6b] rounded-lg p-6 animate-fade-in">
                       <div className="text-center">
                         <div className="text-3xl mb-2">🎉</div>
-                        <div className="text-2xl font-bold text-[#ff6b6b] mb-2">Миссия завершена!</div>
-                        <div className="text-gray-300 mb-4">Вы получили: Proof of Build #3</div>
-                        <div className="text-sm text-gray-400">Возвращение к списку миссий...</div>
+                        <div className="text-2xl font-bold text-[#ff6b6b] mb-2">Mission complete!</div>
+                        <div className="text-gray-300 mb-4">You have received: Proof of Build #3</div>
+                        <div className="text-sm text-gray-400">Return to mission list...</div>
                       </div>
                     </div>
                   )}
